@@ -10,16 +10,25 @@ class calculator{
             result = x;
         }
 
-        switch_function(double y,char c){
+        switch_function(double y,char c,double p){
             switch(c){
                 case '+':
-                    sum(y ,c);
+                    sum(y);
                     break ;
                 case '-':
-                    minus(y,c);
+                    minus(y);
+                    break;
+                case '/':
+                    divided(y);
+                    break;
+                case '*':
+                    times(y);
+                    break;
+                case 'p':
+                    power(p);
                     break;
                 default:
-                    cout << "Enter reco. sign" ;
+                    cout << "Enter rec. sign" ;
             }
         }
     private:
@@ -27,16 +36,38 @@ class calculator{
         void recursion(){
             double y ;
             char c ;
-        cout << result << " " ;
-            cin >> c >>y;
-            this->switch_function(y,c);
+            double p;
+        cout << " = " << result << " " ;
+        cin >> c ;
+        if(c != 'p'){
+            cin >>y;
+        }else{
+            cin >> p ;
         }
-        void sum(double y,char c){
+            this->switch_function(y,c,p);
+        }
+
+        void sum(double y){
             result +=  y;
             recursion();
         }
-        void minus(double y,char c){
+        void minus(double y){
             result-= y;
+            recursion();
+        }
+        void divided(double y){
+            result /=  y;
+            recursion();
+        }
+        void times(double y){
+            result*= y;
+            recursion();
+        }
+        void power(double p){
+                int cons = result;
+            for(int i = 1;i < p;i++){
+                result*=cons;
+            }
             recursion();
         }
 };
@@ -44,8 +75,14 @@ int main()
 {
     double x , y  ;
     char z ;
-    cin >> x >> z >>y;
+    double p ;
+    cin >> x >> z ;
+    if (z != 'p'){
+        cin >>y;
+    }else{
+        cin >>p ;
+    }
     calculator cal(x);
-    cal.switch_function(y,z);
+    cal.switch_function(y,z,p);
     return 0;
 }
