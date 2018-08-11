@@ -1,4 +1,12 @@
 # depslib dependency file v1.0
-1533998861 source:c:\users\paula g\desktop\oop3\main.cpp
+1534017206 source:c:\users\paula g\desktop\oop3\main.cpp
+	<iostream>
+	"calc.h"
+
+1534017337 source:c:\users\paula g\desktop\oop3\calc.cpp
+	"calc.h"
+	<iostream>
+
+1534016973 c:\users\paula g\desktop\oop3\calc.h
 	<iostream>
 
