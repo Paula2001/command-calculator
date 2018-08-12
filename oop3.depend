@@ -1,20 +1,20 @@
 # depslib dependency file v1.0
-1534022490 source:c:\users\paula g\desktop\oop3\main.cpp
+1534039141 source:c:\users\paula g\desktop\oop3\main.cpp
 	<iostream>
 	"calc.h"
 	"controls.h"
 
-1534019683 source:c:\users\paula g\desktop\oop3\calc.cpp
+1534040441 source:c:\users\paula g\desktop\oop3\calc.cpp
 	"calc.h"
 	<iostream>
 
-1534019606 c:\users\paula g\desktop\oop3\calc.h
+1534041791 c:\users\paula g\desktop\oop3\calc.h
 	<iostream>
 
-1534022389 c:\users\paula g\desktop\oop3\controls.h
+1534038473 c:\users\paula g\desktop\oop3\controls.h
 	"calc.h"
 
-1534022074 source:c:\users\paula g\desktop\oop3\controls.cpp
+1534039163 source:c:\users\paula g\desktop\oop3\controls.cpp
 	"controls.h"
 	<iostream>
 

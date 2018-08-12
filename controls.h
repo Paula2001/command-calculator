@@ -9,11 +9,12 @@ class controls : public calc
         controls();
         virtual ~controls();
         void explain();
-        char get_choices();
+        void get_choices();
 
     protected:
 
     private:
+
 };
 
 #endif // CONTROLS_H

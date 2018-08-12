@@ -1,20 +1,20 @@
 #ifndef CALC_H
 #define CALC_H
 #include <iostream>
+
 using namespace std ;
 
 class calc {
     public:
         calc();
-        calc(double x);
-        switch_function_arithmetic(double y,char c,double p);
-        swtch_function_test();
-
+        int get_choices();
     protected:
 
     private:
         double result;
         void recursion();
+        switch_function_arithmetic(double y,char c,double p);
+        switch_function_test(double s,double e ,char c);
         void sum(double y);
         void minus(double y);
         void divided(double y);
