@@ -21,6 +21,8 @@ class calc {
         void times(double y);
         void power(double p);
         void get_prime(double s ,double e);
+        void get_even(double s,double e);
+
 };
 
 #endif // CALC_H

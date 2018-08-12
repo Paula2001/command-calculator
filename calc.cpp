@@ -7,13 +7,14 @@ calc::calc()
 }
 calc::switch_function_test(double s,double e,char c)
 {
-    switch (c){
-        case 'p' :
-            this->get_prime(s,e);
-            break;
-        case 'e' :
-            this->get_even(s,e);
-            break;
+    switch (c)
+    {
+    case 'p' :
+        this->get_prime(s,e);
+        break;
+    case 'e' :
+        this->get_even(s,e);
+        break;
     }
 }
 calc::switch_function_arithmetic(double y,char c,double p)
@@ -46,7 +47,8 @@ void calc::recursion()
     double p;
     cout << " = " << result << " " ;
     cin >> c ;
-    switch (c){
+    switch (c)
+    {
     case 'q' :
         get_choices();
         break;
@@ -92,7 +94,8 @@ void calc::power(double p)
 }
 void calc::get_prime(double s,double e)
 {
-    if(s == 1 || s == 0){
+    if(s == 1 || s == 0)
+    {
         s = 2;
     }
     for(int i = s; i <= e; i++)
@@ -137,15 +140,36 @@ int calc::get_choices()
     }
     else if(decide == "test")
     {
-        double s ,e;
+        double s,e;
         char c;
         cin >> c >> s >> e;
-        switch_function_test(c,s,e);
+        switch_function_test(s,e,c);
     }
     else if(decide == "quit")
     {
         return 0;
     }
-
 }
+void calc::get_even(double s,double e){
+    if(s == 0){
+        cout << "0 " << "is not an even number";
+    }else{
+        for(int i = s;i <= e;i++){
+            if(i % 2 == 0){
+            cout <<i <<": is even"<<endl;
+            }
+        }
+    cout << "want to test something else ? if yes type cont ,if no type quit " <<endl;
+     string x ;
+     cin >> x ;
+     double s, e;
+     if (x == "cont"){
+        cin >> s >> e;
+        get_even(s,e);
+     }else{
+        get_choices();
+     }
+}
+}
+
 
