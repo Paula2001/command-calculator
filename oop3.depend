@@ -4,7 +4,7 @@
 	"calc.h"
 	"controls.h"
 
-1534262355 source:c:\users\paula g\desktop\oop3\calc.cpp
+1534262902 source:c:\users\paula g\desktop\oop3\calc.cpp
 	<iostream>
 	"calc.h"
 	<string>
@@ -18,7 +18,7 @@
 	<string>
 	<iostream>
 
-1534262773 source:c:\users\paula g\desktop\oop3\controls.cpp
+1534262862 source:c:\users\paula g\desktop\oop3\controls.cpp
 	<iostream>
 	"controls.h"
 	"calc.h"

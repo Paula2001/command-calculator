@@ -28,13 +28,13 @@ int controls::get_choices()
         char z ;
         double p ;
         cin >> x >> z ;
-        if (z != 'p')
+        if (z == 'p')
         {
-            cin >>y;
+            cin >>p;
         }
         else
         {
-            cin >>p ;
+            cin >>y ;
         }
         c1.switch_function_arithmetic(y,z,p);
     }

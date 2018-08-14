@@ -59,6 +59,9 @@ void calc::recursion()
     case 'q' :
         get_choices();
         break;
+    case 'p' :
+        cin >> p;
+        switch_function_arithmetic(y,c,p);
     default:
         cin >> y  ;
         switch_function_arithmetic(y,c,p);
@@ -87,7 +90,7 @@ void calc::times(double y)
 }
 void calc::power(double p)
 {
-    int cons = result;
+    double cons = result;
     for(int i = 1; i < p; i++)
     {
         result*=cons;
