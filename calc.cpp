@@ -1,20 +1,27 @@
-#include "calc.h"
 #include <iostream>
+#include "calc.h"
+#include <string>
 using namespace std;
 calc::calc()
 {
-    result = 0;
+ result = 2;
 }
-calc::switch_function_test(double s,double e,char c)
+calc::switch_function_test(double s,double e,string st)
 {
-    switch (c)
-    {
-    case 'p' :
+
+    if(st == "prime"){
+        cin >>s >>e;
         this->get_prime(s,e);
-        break;
-    case 'e' :
+    }else if(st == "even"){
+        cout << "1st number -> ";
+        cin >>s;
+        cout << "2nd number -> ";
+        cin >>e ;
         this->get_even(s,e);
-        break;
+    }else if(st == "quit"){
+        quit();
+    }else{
+        retest();
     }
 }
 calc::switch_function_arithmetic(double y,char c,double p)
@@ -52,14 +59,9 @@ void calc::recursion()
     case 'q' :
         get_choices();
         break;
-    case 'm' :
-        cin >> y >> p ;
-        this->switch_function_arithmetic(y,c,p);
-        break;
-    case 'p':
-        cin >>p;
-        this->switch_function_arithmetic(y,c,p);
-        break;
+    default:
+        cin >> y  ;
+        switch_function_arithmetic(y,c,p);
     }
 }
 
@@ -115,61 +117,19 @@ void calc::get_prime(double s,double e)
     }
 }
 
-int calc::get_choices()
-{
-    cout << "choose between test mode or arithmetic or just quit the program by typing <quit>"<<endl ;
-    string decide;
-    cin >> decide;
 
-    if(decide == "arith")
+void calc::get_even(double s,double e)
+{
+    (s == 0)? s = 2: 0 ;
+    for(int i = s; i <= e; i++)
     {
-        double x, y  ;
-        char z ;
-        double p ;
-        cin >> x >> z ;
-        if (z != 'p')
+        if(i % 2 == 0)
         {
-            cin >>y;
-        }
-        else
-        {
-            cin >>p ;
-        }
-        result = x;
-        switch_function_arithmetic(y,z,p);
-    }
-    else if(decide == "test")
-    {
-        double s,e;
-        char c;
-        cin >> c >> s >> e;
-        switch_function_test(s,e,c);
-    }
-    else if(decide == "quit")
-    {
-        return 0;
-    }
-}
-void calc::get_even(double s,double e){
-    if(s == 0){
-        cout << "0 " << "is not an even number";
-    }else{
-        for(int i = s;i <= e;i++){
-            if(i % 2 == 0){
             cout <<i <<": is even"<<endl;
-            }
         }
-    cout << "want to test something else ? if yes type cont ,if no type quit " <<endl;
-     string x ;
-     cin >> x ;
-     double s, e;
-     if (x == "cont"){
-        cin >> s >> e;
-        get_even(s,e);
-     }else{
-        get_choices();
-     }
+    }
+    even_recap();
 }
-}
+
 
 

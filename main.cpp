@@ -5,9 +5,8 @@
 using namespace std;
 int main()
 {
-    calc calculator;
+    double x;
     controls ctrls;
-    ctrls.explain();
-    calculator.get_choices();
+    ctrls.get_choices();
     return 0;
 }
