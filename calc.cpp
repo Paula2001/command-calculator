@@ -10,7 +10,10 @@ calc::switch_function_test(double s,double e,string st)
 {
 
     if(st == "prime"){
-        cin >>s >>e;
+        cout << "1st number -> ";
+        cin >>s;
+        cout << "2nd number -> ";
+        cin >>e ;
         this->get_prime(s,e);
     }else if(st == "even"){
         cout << "1st number -> ";
@@ -40,6 +43,9 @@ calc::switch_function_arithmetic(double y,char c,double p)
     case '*':
         times(y);
         break;
+    case 's':
+        square(p);
+        break;
     case 'p':
         power(p);
         break;
@@ -61,6 +67,9 @@ void calc::recursion()
         break;
     case 'p' :
         cin >> p;
+        switch_function_arithmetic(y,c,p);
+    case 's':
+        cin >> p ;
         switch_function_arithmetic(y,c,p);
     default:
         cin >> y  ;
@@ -97,6 +106,21 @@ void calc::power(double p)
     }
     recursion();
 }
+void calc::square(double p)
+{
+    /*
+    double constant = p ;
+    cout << "this is the result" << result <<endl;
+    cout << "this is the constant" << constant <<endl;
+    cout << "this is the p" << p <<endl;
+    for(int i = 0; i < p ; i++)
+    {
+        result=result / constant;
+    }
+
+    recursion();
+    */
+}
 void calc::get_prime(double s,double e)
 {
     if(s == 1 || s == 0)
@@ -118,6 +142,7 @@ void calc::get_prime(double s,double e)
             cout << i << " is Prime Number "<<endl;
         }
     }
+    prime_recap();
 }
 
 

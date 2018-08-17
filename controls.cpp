@@ -24,12 +24,21 @@ int controls::get_choices()
     cin >> decide;
     if(decide == "arith")
     {
+        cout << "write the 1st number then the sign"<<endl;
+        cout << "+  , - , * , / , " <<endl;
+        cout << "there's some special signs like( p )for power like the that( num p num ) ,"<<endl;
+        cout << "also ( s ) for square root but still under construction (num p num) "<<endl;
+        cout << "if u want to quit press ( q )"<<endl;
         double x, y  ;
         char z ;
         double p ;
-        cin >> x >> z ;
-        if (z == 'p')
+        cout <<"num. -> ";
+        cin >> x  ;
+        cout <<"sign. -> ";
+        cin >> z ;
+        if (z == 'p' || z == 's')
         {
+
             cin >>p;
         }
         else
@@ -77,7 +86,7 @@ void controls::prime_recap(){
         cin >>s;
         cout << "2nd number -> ";
         cin >>e ;
-        c2.get_even(s,e);
+        c2.get_prime(s,e);
      }else{
         get_choices();
      }

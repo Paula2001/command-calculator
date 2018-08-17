@@ -12,6 +12,7 @@ class calc:public controls{
         switch_function_test(double s,double e ,string st);
         switch_function_arithmetic(double y,char c,double p);
         void get_even(double s,double e);
+        void get_prime(double s ,double e);
 
     protected:
 
@@ -22,7 +23,8 @@ class calc:public controls{
         void divided(double y);
         void times(double y);
         void power(double p);
-        void get_prime(double s ,double e);
+        void square(double p);
+        double sqr;
 
 
 };
